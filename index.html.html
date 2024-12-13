@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة XO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>لعبة XO</h1>
+            <p>اختر وضع اللعب:</p>
+        </div>
+
+        <div class="game-options">
+            <div class="circle" id="play-friend">
+                <p>اللعب ضد الصديق</p>
+            </div>
+            <div class="circle" id="play-ai">
+                <p>اللعب ضد الذكاء الاصطناعي</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-board" id="game-board" style="display: none;">
+        <div class="row">
+            <div class="cell" data-index="0" onclick="handleCellClick(this)"></div>
+            <div class="cell" data-index="1" onclick="handleCellClick(this)"></div>
+            <div class="cell" data-index="2" onclick="handleCellClick(this)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" data-index="3" onclick="handleCellClick(this)"></div>
+            <div class="cell" data-index="4" onclick="handleCellClick(this)"></div>
+            <div class="cell" data-index="5" onclick="handleCellClick(this)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" data-index="6" onclick="handleCellClick(this)"></div>
+            <div class="cell" data-index="7" onclick="handleCellClick(this)"></div>
+            <div class="cell" data-index="8" onclick="handleCellClick(this)"></div>
+        </div>
+
+        <div class="result">
+            <p id="result-text">النتيجة: </p>
+            <button onclick="restartGame()">إعادة اللعب</button>
+            <button onclick="backToMainPage()">العودة إلى الصفحة الرئيسية</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
